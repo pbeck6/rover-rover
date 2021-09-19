@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate') %>
+<div class='row'>
+    <h1 class='text-center'>Edit Place</h1>
+    <div class='col-md-6 offset-md-3'>
+        <form enctype='multipart/form-data' action='/places/<%= place._id %>?_method=PUT' method='POST' class='needs-validation' novalidate>
+            <div class='mb-4'>
+                <label class='form-label' for='title'>Title</label>
+                <input class='form-control' type='text' id='title' name='place[title]' value='<%= place.title %>' required>
+            </div>
+            <div class='mb-4'>
+                <label class ='form-label' for='address'>Address</label>
+                <input class='form-control' type='text' id='address' name='place[address]' value='<%= place.address %>' required>
+            </div>
+            <div class='mb-4'>
+                <label class ='form-label' for='price'>Price</label>
+                <div class='input-group'>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" id='price' name='place[price]' value='<%= place.price %>' required>
+                </div>
+            </div>
+            <div class='mb-4'>
+                <label class ='form-label' for='image'>Add Images</label>
+                <input class='form-control' type='file' id='image' name='image' multiple>
+            </div>
+            <div class='mb-4'>
+                <label class ='form-label' for='description'>Description</label>
+                <textarea class='form-control' type='text' id='description' name='place[description]' required><%= place.description %></textarea>
+            </div>
+            <div class='mb-3'>
+                <% place.images.forEach(function (img, i) { %>
+                <div class='mb-1'>
+                    <img src='<%= img.thumbnail %>' class='img-thumbnail'>
+                    <div class='form-check-inline'>
+                        <input type='checkbox' id='image-<%=i%>' name='deleteImages[]' value='<%= img.filename %>'>
+                    </div>
+                    <label for='image-<%=i%>'>Delete?</label>
+                </div>
+                <% }) %>
+            </div>
+            <div class='mb-4'>
+                <button class='btn btn-success'>Save Changes</button>
+                <a class='btn btn-danger' href='/places/<%= place._id %>'>Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

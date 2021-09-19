@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') %>
+<div class='row'>
+    <h1 class='text-center'>New Place</h1>
+    <div class='col-md-6 offset-md-3'>
+        <form action='/places' method='POST' class='needs-validation' enctype='multipart/form-data' novalidate>
+            <div class='mb-4'>
+                <label class='form-label' for='title'>Title</label>
+                <input class='form-control' type='text' id='title' name='place[title]' placeholder='Enter title' required>
+            </div>
+            <div class='mb-4'>
+                <label class ='form-label' for='address'>Address</label>
+                <input class='form-control' type='text' id='address' name='place[address]' placeholder='Enter address' required>
+            </div>
+            <div class='mb-4'>
+                <label class ='form-label' for='price'>Price</label>
+                <div class='input-group'>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" id='price' name='place[price]' placeholder="0.00" required>
+                </div>
+            </div>
+            <div class='mb-4'>
+                <label class ='form-label' for='image'>Add Images</label>
+                <input class='form-control' type='file' id='image' name='image' multiple required>
+            </div>
+            <div class='mb-4'>
+                <label class ='form-label' for='description'>Description</label>
+                <textarea class='form-control' type='text' id='description' name='place[description]' required></textarea>
+            </div>
+            <div class='mb-4'>
+                <button class='btn btn-success'>Add New Place</button>
+                <a class='btn btn-danger' href='/places'>Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

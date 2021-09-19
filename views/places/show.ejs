@@ -1,0 +1,98 @@
+<% layout('layouts/boilerplate') %>
+<link rel='stylesheet' href='/css/stars.css'>
+
+<div class='row'>
+    <div class='col-6'>
+        <div id="placeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <% place.images.forEach((img, i) => { %>
+                <div class="carousel-item <%= i === 0 ? 'active' : ''%>">
+                    <img class="d-block w-100" src="<%= img.url %>">
+                </div>
+                <% }) %>
+            </div>
+            <% if ( place.images.length > 1 ) { %>
+                <button class="carousel-control-prev" type="button" data-bs-target="#placeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#placeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            <% } %>
+        </div>
+        <div class="card mb-5">
+            <div class="card-body">
+                <h5 class="card-title"><%= place.title %></h5>
+                <p class="card-text"><%= place.description %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-muted"><%= place.address %></li>
+                <li class="list-group-item">$<%= place.price %></li>
+                <li class="list-group-item small">Added by: <%= place.author.username %></li>
+            </ul>
+            <% if ( currentUser && place.author.equals(currentUser._id)) { %>
+            <div class="card-body">
+                <a class='card-link btn btn-warning' href='/places/<%= place._id %>/edit'>Edit</a>
+                <form class='d-inline' action='/places/<%= place._id %>?_method=DELETE' method='POST'>
+                    <button class='btn btn-danger'>Delete</button>
+                </form>
+            </div>
+            <% } %>
+            <div class="card-footer text-muted">
+                <a class='btn btn-default' href='/places'>Back to Index</a>
+            </div>
+        </div>
+    </div>
+    <div class='col-6'>
+        <div id='map' class='mb-3'></div>
+        <% if(currentUser) { %>
+        <h5 class='mb-3'>How was your experience?</h5>
+            <form class='mb-4 needs-validation' action='/places/<%= place._id %>/reviews' method='POST' novalidate>
+                <div class='mb-1'>
+                    <fieldset class="starability-basic">
+                        <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
+                        <input type="radio" id="rate1" name="review[rating]" value="1" />
+                        <label for="rate1">1 star.</label>
+                        <input type="radio" id="rate2" name="review[rating]" value="2" />
+                        <label for="rate2">2 stars.</label>
+                        <input type="radio" id="rate3" name="review[rating]" value="3" />
+                        <label for="rate3">3 stars.</label>
+                        <input type="radio" id="rate4" name="review[rating]" value="4" />
+                        <label for="rate4">4 stars.</label>
+                        <input type="radio" id="rate5" name="review[rating]" value="5" />
+                        <label for="rate5">5 stars.</label>
+                        <span class="starability-focus-ring"></span>
+                    </fieldset>
+                </div>
+                <div class='mb-3'>
+                    <label class='form-label' for='body'>Comments</label>
+                    <textarea class='form-control' id='body' name='review[body]' cols='30' rows='6' required></textarea>
+                </div>
+                <button class='btn btn-success'>Add Review</button>
+            </form>
+        <% } %>
+        <h5>Reviews</h5>
+            <% for (let review of place.reviews) { %>
+            <div class='card mb-4'>
+                <div class='card-body'>
+                    <h5 class='card-title'><%= review.author.username %></h5>
+                    <p class='starability-result' data-rating='<%= review.rating %>'>Rated <%= review.rating %> stars</p>
+                    <p class='card-text'>Review: <%= review.body %></p>
+                    <% if ( currentUser && review.author.equals(currentUser._id)) { %>
+                    <form action='/places/<%= place._id %>/reviews/<%= review._id %>?_method=DELETE' method='POST'>
+                        <button class='btn btn-sm btn-danger'>Delete</button>
+                    </form>
+                    <% } %>
+                </div>
+            </div>
+            <% } %>
+    </div>
+</div>
+
+<script>
+    const mapBoxToken = '<%- process.env.MAPBOX_TOKEN %>';
+    const place = <%- JSON.stringify(place) %>;
+</script>
+<script src='/js/showPageMap.js'></script>
