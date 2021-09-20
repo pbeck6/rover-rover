@@ -22,7 +22,7 @@ const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
 
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/rover-rover';
-const secret = process.env.SECRET || 'YGZH2K4M5N7Q8R9TBUCVEEXFZH2J3M5N6P8R';
+const secret = process.env.SECRET || 'YGZH2K4M5N7Q8R9TBUCVEXFZH2J3M5N6P8R';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
