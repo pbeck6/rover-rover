@@ -19,7 +19,7 @@
 
 ## About RoverRover
 
-![View screen](https://res.cloudinary.com/dtpudbj9x/image/upload/c_scale,w_342/v1632728516/RoverRover/Untitled-5_lqjuh7.jpg)
+![View screen](https://res.cloudinary.com/dtpudbj9x/image/upload/c_scale,w_669/v1632728516/RoverRover/Untitled-5_lqjuh7.jpg)
 
 RoverRover is a web app for customers to leave reviews for their favorite dog-friendly businesses. Search beforehand and put an end to asking, "Can I bring my dog?"
 
