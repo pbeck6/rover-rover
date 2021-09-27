@@ -21,6 +21,7 @@
 
 ![View screen](https://res.cloudinary.com/dtpudbj9x/image/upload/c_scale,w_342/v1632728516/RoverRover/Untitled-5_lqjuh7.jpg)
 
+RoverRover is a web app for customers to leave reviews for their favorite dog-friendly businesses. Search beforehand whether or not your favorite spot allows you to bring your favorite pet(s).
 
 ### Built With
 
