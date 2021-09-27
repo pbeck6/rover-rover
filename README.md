@@ -11,9 +11,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -25,6 +23,11 @@
   * [Node.js](https://www.nodejs.org/en/) - The runtime environment used
   * [MongoDB](https://www.mongodb.com/) - Database program
   * [Bootstrap](https://www.getbootstrap.com) - Front-end framework
+
+## Contact
+
+Philip Beck - stoneroll6@gmail.com
+Project Link: [https://github.com/stoneroll6/rover-rover](https://github.com/stoneroll6/rover-rove)
 
 ## Acknowledgements
 
