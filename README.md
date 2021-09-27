@@ -26,9 +26,9 @@
 
 ## Contact
 
-Philip Beck - stoneroll6@gmail.com
+Philip Beck - [LinkedIn](www.linkedin.com/in/stoneroll6)
 
-Project Link: [https://github.com/stoneroll6/rover-rover](https://github.com/stoneroll6/rover-rove)
+Project Link: [https://github.com/stoneroll6/rover-rover](https://github.com/stoneroll6/rover-rover)
 
 ## Acknowledgements
 
