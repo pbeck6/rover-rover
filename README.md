@@ -20,11 +20,11 @@
 
 ## About RoverRover
 
-## Built With
+### Built With
 
-* [Node.js](https://www.nodejs.org/en/) - The runtime environment used
-* [MongoDB](https://www.mongodb.com/) - Database program
-* [Bootstrap](https://www.getbootstrap.com) - Front-end framework
+  * [Node.js](https://www.nodejs.org/en/) - The runtime environment used
+  * [MongoDB](https://www.mongodb.com/) - Database program
+  * [Bootstrap](https://www.getbootstrap.com) - Front-end framework
 
 ## Acknowledgements
 
