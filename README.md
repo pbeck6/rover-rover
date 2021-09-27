@@ -28,4 +28,4 @@
 
 ## Acknowledgements
 
-This web app was built while taking Colt Steele's Web Developer Bootcamp available [here](https://www.udemy.com/course/the-web-developer-bootcamp/)
+This web app was built while taking Colt Steele's Web Developer Bootcamp available [here](https://www.udemy.com/course/the-web-developer-bootcamp/).
