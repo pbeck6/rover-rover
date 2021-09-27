@@ -1,2 +1,2 @@
 # RoverRover
-## Yelp-like web app built for dog-conscious shoppers
+## "Can I bring my dog?"
