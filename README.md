@@ -1,5 +1,4 @@
-# RoverRover
-## "Can I bring my dog?"
+# RoverRover    -    "Can I bring my dog?"
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
