@@ -6,7 +6,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about">About The Project</a>
+      <a href="#about-roverrover">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -18,9 +18,10 @@
   </ol>
 </details>
 
+## About RoverRover
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Node.js](https://www.nodejs.org/en/) - The runtime environment used
+* [MongoDB](https://www.mongodb.com/) - Database program
+* [Bootstrap](https://www.getbootstrap.com) - Front-end framework
