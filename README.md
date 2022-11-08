@@ -1,6 +1,6 @@
 # RoverRover
 
-## Try out the app here: [https://rover-rover.herokuapp.com/](https://rover-rover.herokuapp.com/)
+
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
